@@ -8,13 +8,32 @@
 import SwiftUI
 
 struct LBinding: View {
+    @State var screenBG:Color = Color.red
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            screenBG.ignoresSafeArea()
+            ButtonView(screenBG: $screenBG)
+        }
     }
 }
 
 struct LBinding_Previews: PreviewProvider {
     static var previews: some View {
         LBinding()
+    }
+}
+
+struct ButtonView: View {
+    @Binding var screenBG:Color
+    var body: some View {
+        VStack{
+            Button("Button 1") {
+                screenBG = .yellow
+            }
+            Button("Button 2") {
+                screenBG = .green
+            }
+        }
     }
 }

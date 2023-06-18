@@ -8,8 +8,53 @@
 import SwiftUI
 
 struct LSheet: View {
+    @State var showView:Bool = false
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack(alignment: .bottom){
+            Color.green.ignoresSafeArea()
+            VStack{
+                Button("Press me !!"){
+                    showView.toggle()
+                    
+                }
+                Spacer()
+            }
+            //we should use one fullsheet per view
+            .fullScreenCover(isPresented: $showView, content: {
+                //don't use if-else conditions here
+                //like: if{sheet1} else{sheet2}
+                SecondScreen()
+            })
+            //we should use one sheet per view
+//            .sheet(isPresented: $showView, content: {
+//                //don't use if-else conditions here
+//                //like: if{sheet1} else{sheet2}
+//                SecondScreen()
+//            })
+            
+            //we can use fullsheet and sheet in one view as well
+        }
+        
+    }
+}
+
+struct SecondScreen: View{
+    @Environment(\.presentationMode) var presentationMode
+    var body: some View{
+        ZStack(alignment: .topLeading){
+            Color.red.ignoresSafeArea()
+            Button(action: {
+                presentationMode.wrappedValue.dismiss()
+            },
+                   label: {
+                Image(systemName: "xmark")
+                    .foregroundColor(.white)
+                    .font(.largeTitle)
+                    .padding(20)
+            })
+            
+        }
+        
     }
 }
 

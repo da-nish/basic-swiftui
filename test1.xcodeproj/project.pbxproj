@@ -17,6 +17,12 @@
 		CE19BDAD2A3E4109008B419C /* Lsection2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19BDAC2A3E4109008B419C /* Lsection2.swift */; };
 		CE19BDB02A3ED85F008B419C /* LSafearea.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19BDAF2A3ED85F008B419C /* LSafearea.swift */; };
 		CE19BDB32A3EDC93008B419C /* LButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19BDB22A3EDC93008B419C /* LButton.swift */; };
+		CE19BDB62A3EE429008B419C /* LState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19BDB52A3EE429008B419C /* LState.swift */; };
+		CE19BDB82A3EE79D008B419C /* LBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19BDB72A3EE79D008B419C /* LBinding.swift */; };
+		CE19BDBB2A3F4E74008B419C /* LAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19BDBA2A3F4E74008B419C /* LAnimate.swift */; };
+		CE19BDBD2A3F5F1E008B419C /* LTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19BDBC2A3F5F1E008B419C /* LTransition.swift */; };
+		CE19BDC02A3F613F008B419C /* LSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19BDBF2A3F613F008B419C /* LSheet.swift */; };
+		CE19BDC22A3F6615008B419C /* LNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19BDC12A3F6615008B419C /* LNavigation.swift */; };
 		CE62584D2A23351E006B5291 /* test1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62584C2A23351E006B5291 /* test1App.swift */; };
 		CE62584F2A23351E006B5291 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62584E2A23351E006B5291 /* ContentView.swift */; };
 		CE6258512A23351E006B5291 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6258502A23351E006B5291 /* Assets.xcassets */; };
@@ -35,6 +41,12 @@
 		CE19BDAC2A3E4109008B419C /* Lsection2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lsection2.swift; sourceTree = "<group>"; };
 		CE19BDAF2A3ED85F008B419C /* LSafearea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSafearea.swift; sourceTree = "<group>"; };
 		CE19BDB22A3EDC93008B419C /* LButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LButton.swift; sourceTree = "<group>"; };
+		CE19BDB52A3EE429008B419C /* LState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LState.swift; sourceTree = "<group>"; };
+		CE19BDB72A3EE79D008B419C /* LBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBinding.swift; sourceTree = "<group>"; };
+		CE19BDBA2A3F4E74008B419C /* LAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAnimate.swift; sourceTree = "<group>"; };
+		CE19BDBC2A3F5F1E008B419C /* LTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTransition.swift; sourceTree = "<group>"; };
+		CE19BDBF2A3F613F008B419C /* LSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSheet.swift; sourceTree = "<group>"; };
+		CE19BDC12A3F6615008B419C /* LNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNavigation.swift; sourceTree = "<group>"; };
 		CE6258492A23351E006B5291 /* test1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE62584C2A23351E006B5291 /* test1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test1App.swift; sourceTree = "<group>"; };
 		CE62584E2A23351E006B5291 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -113,6 +125,33 @@
 			path = button;
 			sourceTree = "<group>";
 		};
+		CE19BDB42A3EE419008B419C /* state */ = {
+			isa = PBXGroup;
+			children = (
+				CE19BDB52A3EE429008B419C /* LState.swift */,
+				CE19BDB72A3EE79D008B419C /* LBinding.swift */,
+			);
+			path = state;
+			sourceTree = "<group>";
+		};
+		CE19BDB92A3F4E62008B419C /* animate */ = {
+			isa = PBXGroup;
+			children = (
+				CE19BDBA2A3F4E74008B419C /* LAnimate.swift */,
+				CE19BDBC2A3F5F1E008B419C /* LTransition.swift */,
+			);
+			path = animate;
+			sourceTree = "<group>";
+		};
+		CE19BDBE2A3F6131008B419C /* navigation */ = {
+			isa = PBXGroup;
+			children = (
+				CE19BDBF2A3F613F008B419C /* LSheet.swift */,
+				CE19BDC12A3F6615008B419C /* LNavigation.swift */,
+			);
+			path = navigation;
+			sourceTree = "<group>";
+		};
 		CE6258402A23351E006B5291 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +171,9 @@
 		CE62584B2A23351E006B5291 /* test1 */ = {
 			isa = PBXGroup;
 			children = (
+				CE19BDBE2A3F6131008B419C /* navigation */,
+				CE19BDB92A3F4E62008B419C /* animate */,
+				CE19BDB42A3EE419008B419C /* state */,
 				CE19BDB12A3EDC86008B419C /* button */,
 				CE19BDAE2A3ED846008B419C /* safearea */,
 				CE19BDA72A3E3D76008B419C /* grid */,
@@ -234,15 +276,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE19BDC02A3F613F008B419C /* LSheet.swift in Sources */,
+				CE19BDB62A3EE429008B419C /* LState.swift in Sources */,
 				CE19BD9E2A3E3498008B419C /* LSpacer.swift in Sources */,
 				CE19BDA92A3E3D97008B419C /* LGridView.swift in Sources */,
 				CE62584F2A23351E006B5291 /* ContentView.swift in Sources */,
+				CE19BDBB2A3F4E74008B419C /* LAnimate.swift in Sources */,
 				CE19BDAD2A3E4109008B419C /* Lsection2.swift in Sources */,
+				CE19BDB82A3EE79D008B419C /* LBinding.swift in Sources */,
 				CE19BDA62A3E3B8E008B419C /* LScrollView.swift in Sources */,
 				CE19BDA12A3E37B5008B419C /* Linit_1.swift in Sources */,
 				CE19BDB02A3ED85F008B419C /* LSafearea.swift in Sources */,
 				CE19BD9B2A3E2BCF008B419C /* LFrameView.swift in Sources */,
+				CE19BDC22A3F6615008B419C /* LNavigation.swift in Sources */,
 				CE19BDAB2A3E3FB1008B419C /* Lsection.swift in Sources */,
+				CE19BDBD2A3F5F1E008B419C /* LTransition.swift in Sources */,
 				CE19BDA32A3E39E5008B419C /* LForEachUI.swift in Sources */,
 				CE98EA3A2A3E175600D87FDC /* LImageView.swift in Sources */,
 				CE19BDB32A3EDC93008B419C /* LButton.swift in Sources */,

@@ -9,9 +9,34 @@ import SwiftUI
 
 struct LNavigation: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+            ScrollView{
+                NavigationLink("Click here", destination: SecondScreen1())
+                Text("Hello world...")
+                Text("Hello world...")
+                Text("Hello world...")
+                
+            }
+        }
+        .navigationTitle("Inbox")
+        .navigationBarItems(
+                leading: Image(systemName: "person.fill"),
+                trailing: Image(systemName: "gear"))
+//        .navigationBarTitleDisplayMode(.inline)
+//        .navigationBarHidden(true)
     }
 }
+
+struct SecondScreen1: View {
+    var body: some View{
+        ZStack{
+            Color.green.ignoresSafeArea()
+                
+            NavigationLink("third screen", destination: Text("new screen").navigationBarHidden(true))
+        }
+    }
+}
+
 
 struct LNavigation_Previews: PreviewProvider {
     static var previews: some View {
